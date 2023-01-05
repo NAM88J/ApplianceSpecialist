@@ -238,11 +238,13 @@ header .flex {
 
 .foryou {
     padding-bottom: 120px;
+    overflow-x: hidden;
 }
 .foryou_list {
     list-style: none;
     padding-top: 30px;
     counter-reset: item;
+    position: relative;
 }
 .foryou_list li {
     margin-top: 0;
@@ -253,10 +255,32 @@ header .flex {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
     padding: 23px 0;
-    border-bottom: 1px solid rgba(242, 66, 66, 0.2);
+    position: relative;
+}
+.foryou_list:after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    height: 1px;
+    left: -50vw;
+    right: -50vw;
+    background-color: rgba(242, 66, 66, 0.2);
+}
+.foryou_list li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    left: -50vw;
+    right: -50vw;
+    background-color: rgba(242, 66, 66, 0.2);
 }
 .foryou_list.tab {
     padding-top: 0;
+}
+.foryou_list.tab:after,
+.foryou_list.tab li:after {
+    display: none
 }
 .foryou_list.tab li {
     font-size: 25px;
@@ -304,9 +328,6 @@ header .flex {
     position: absolute;
     left: 0;
     top: 0;
-}
-.foryou_list li:first-child {
-    border-top: 1px solid rgba(242, 66, 66, 0.2);
 }
 .foryou_list.tab p {
     font-weight: 400;
@@ -365,6 +386,12 @@ footer .flex {
 }
 .logo_footer path {
     fill: #F24242;
+    -webkit-transition: fill 0.4s;
+    -o-transition: fill 0.4s;
+    transition: fill 0.4s;
+}
+.logo_footer:hover path{
+    fill: #fff;
 }
 .copuright {
     font-size: 11px;
