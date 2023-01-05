@@ -255,6 +255,9 @@ header .flex {
     padding: 23px 0;
     border-bottom: 1px solid rgba(242, 66, 66, 0.2);
 }
+.foryou_list.tab {
+    padding-top: 0;
+}
 .foryou_list.tab li {
     font-size: 25px;
     line-height: 32px;
