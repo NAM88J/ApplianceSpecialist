@@ -569,7 +569,7 @@ footer .col {
         width: 54px;
         height: 46px;
         position: relative;
-        margin-left: 12px;
+        margin-right: -15px;
     }
     .mob_button span {
         left: 15px;
@@ -762,4 +762,5 @@ footer .col {
     footer {
         padding-bottom: 20px;
     }
+    
 }
