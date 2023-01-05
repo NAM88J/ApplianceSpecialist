@@ -566,14 +566,14 @@ footer .col {
     }
     .mob_button {
         display: block;
-        width: 24px;
-        height: 16px;
+        width: 54px;
+        height: 46px;
         position: relative;
         margin-left: 12px;
     }
     .mob_button span {
-        left: 0;
-        right: 0;
+        left: 15px;
+        right: 15px;
         height: 2px;
         background-color: #F24242;
         position: absolute;
@@ -584,13 +584,13 @@ footer .col {
         transition: transform 0.4s, -webkit-transform 0.4s;
     }
     .mob_button span:nth-child(1) {
-        top: 0;
+        top: 15px;
     }
     .mob_button span:nth-child(2) {
-        top: 7px;
+        top: 22px;
     }
     .mob_button span:nth-child(3) {
-        top: 14px;
+        top: 29px;
     }
     .mob_button.active span:nth-child(1) {
         -webkit-transform: rotate(-45deg);
@@ -669,9 +669,24 @@ footer .col {
         position: relative;
         top: auto;
         left: 0;
+        width: 100%;
+    }
+    .main_title img {
+        position: relative;
+        z-index: 1;
+    }
+    .main_title:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 10px solid #131313;
+        z-index: 2;
     }
     .main_text {
-        margin-top: 20px;
+        margin-top: 0;
         position: relative;
         top: 0;
         max-width: 100%;
