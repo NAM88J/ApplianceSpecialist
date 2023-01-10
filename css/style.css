@@ -144,6 +144,8 @@ header .flex {
     width: 1468px;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 120px;
+    padding-top: 45px;
 }
 .main_header {
     display: -webkit-box;
@@ -155,8 +157,7 @@ header .flex {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-top: 20px;
-    margin-bottom: 45px;
+    margin-top: 24px;
 }
 .main_header a {
     margin-left: 19px;
@@ -208,8 +209,8 @@ header .flex {
 .main_title {
     width: 565px;
     position: absolute;
-    top: 65px;
-    left: 30px;
+    top: 45px;
+    left: 45px;
 }
 .main_title img {
     width: 100%;
@@ -224,7 +225,7 @@ header .flex {
     padding-bottom: 40px;
     position: absolute;
     right: 180px;
-    top: 120px;
+    top: 100px;
     z-index: 3;
 }
 .main_text:before {
@@ -447,6 +448,186 @@ footer .col {
 }
 .footer_p {
     padding-top: 100px;
+}
+/* About */
+.main.about {
+    width: 1320px;
+    padding-left: 70px;
+    padding-top: 102px;
+}
+.about .main_title {
+    width: 548px;
+    top: 40px;
+    left: -8px;
+}
+.about .main_text {
+    right: 80px;
+    top: 95px;
+}
+.about_area {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.about_col {
+    width: calc(50% - 15px);
+}
+.about_area p {
+    font-size: 20px;
+    line-height: 1.41;
+    color: #FFFFFF;
+}
+.ht {
+    padding-left: 40px;
+    position: relative;
+}
+.ht:before {
+    content: attr(data-content);
+    position: absolute;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.085em;
+    color: #F24242;
+    transform: rotate(-90deg);
+}
+.about .ht {
+    padding-left: 0;
+}
+.about .ht:before {
+    left: -134px;
+    top: 90px;
+}
+.about_title h2 {
+    font-size: 90px;
+    line-height: 117px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.about_image {
+    margin-top: 30px;
+}
+.about_image img {
+    width: 100%;
+}
+
+/* Services */
+.services.main {
+    width: 1286px;
+    padding-left: 208px;
+    padding-top: 118px;
+}
+.services .main_title {
+    width: 635px;
+    top: 40px;
+    left: 90px;
+}
+.services .main_text {
+    right: 70px;
+    top: 105px;
+}
+
+.ptf {
+    padding-top: 120px;
+}
+/* Repair */
+.repair.main .bg_repair {
+    width: 695px;
+    margin-top: 55px;
+    margin-left: 360px;
+}
+.repair .ht {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.42;
+}
+.repair .ht:before {
+    left: -36px;
+    top: 30px;
+}
+.foryou_list.notactiv.tab li {
+    cursor: default;
+    color: #fff;
+}
+.foryou_list.notactiv.tab li {
+    cursor: default;
+    color: #fff;
+    margin-bottom: 6px;
+}
+.foryou_list.notactiv.tab li:before {
+    color: #F24242;
+}
+.advantages_right {
+    width: 730px;
+}
+.advantages_left {
+    width: calc(100% - 760px);
+}
+.litleform {
+    width: 100%;
+    display: flex;
+    max-height: 320px;
+    border-top: 1px solid #F24242;
+    border-bottom: 1px solid #F24242;
+}
+.litleform_left,
+.litleform_right {
+    width: 50%;
+}
+.litleform_right {
+    background: linear-gradient(142.7deg, #131313 10.55%, #212121 70.93%);
+}
+.litleform_right .content {
+    padding: 30px 0 35px 30px;
+    width: 530px;
+}
+.litleform_left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.litleform_right p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.form {
+    width: 100%;
+}
+.form input {
+    width: calc(100% - 16px);
+    display: block;
+    background: none;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    padding: 6px 8px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 146.5%;
+    color: rgba(255, 255, 255, 0.5);
+}
+.form input.error {
+    border-bottom: 1px solid #F24242;
+}
+.form button {
+    font-size: 20px;
+    line-height: 26px;
+    width: 100%;
+    border: 1px solid #F24242;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #FFFFFF;
+    background: none;
+    cursor: pointer;
+}
+.form button:hover {
+    border: 1px solid #F24242;
+    color: #F24242;
 }
 @media (max-width: 1480px) {
     .main {
@@ -685,8 +866,6 @@ footer .col {
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start;
-        margin-top: 10px;
-        margin-bottom: 15px;
     }
     .main_header a {
         margin-left: 0;
