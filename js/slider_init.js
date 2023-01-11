@@ -3,9 +3,6 @@ $('.reviews_full').slick({
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.reviews_nav',
-    prevArrow: '<div class="slider_prew slider_arrow icofont">',
-    nextArrow: '<div class="slider_next slider_arrow icofont">',
 
 });
 $('.reviews_content-des').slick({
@@ -14,8 +11,8 @@ $('.reviews_content-des').slick({
     arrows: true,
     fade: true,
     asNavFor: '.reviews_nav',
-    prevArrow: '<div class="slider_prew slider_arrow icofont">',
-    nextArrow: '<div class="slider_next slider_arrow icofont">',
+    prevArrow: '<div class="slider_prew slider_arrow">',
+    nextArrow: '<div class="slider_next slider_arrow">',
 
 });
 $('.reviews_nav').slick({
