@@ -745,7 +745,7 @@ footer .col {
 .contact_map .title {
     margin-bottom: 42px;
 }
-.contact_map img {
+.contact_map iframe {
     width: 100%;
 }
 /* Reviews */
@@ -876,6 +876,52 @@ footer .col {
     background-size: 100% 100%;
     right: 0;
 }
+.modal_fon {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 30;
+    display: none;
+}
+.modal {
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #F24242;
+    z-index: 35;
+    text-align: center;
+    background: #131313;
+    border-radius: 5px;
+    display: none;
+}
+.close_modal {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    display: block;
+    cursor: pointer;
+}
+.close_modal svg {
+    width: 100%;
+    height: 100%;
+    transition: fill 0.4s;
+    fill: #fff;
+}
+.close_modal:hover svg {
+    fill: #F24242;
+}
+.modal_content {
+    font-size: 34px;
+    line-height: 1.5;
+}
 @media (max-width: 1480px) {
     .main,
     .main.tips,
@@ -993,6 +1039,13 @@ footer .col {
     .container {
         width: 788px;
         padding: 0 10px;
+    }
+    .modal {
+        padding: 15px;
+        min-width: 180px;
+    }
+    .modal_content {
+        font-size: 28px;
     }
     .main.tips,
     .main.contact {
@@ -1227,6 +1280,9 @@ footer .col {
     .container {
         width: 320px;
         padding: 0 10px;
+    }
+    .modal_content {
+        font-size: 24px;
     }
     .slider_arrow {
         width: 50px;

@@ -17,6 +17,24 @@ function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
+function isPhone(phone) {
+    var regex = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+    return regex.test(phone);
+}
+function success_modal () {
+    let fon = $('.modal_fon'),
+        window = $('.modal');
+    fon.fadeIn('200');
+    setTimeout(function() { 
+        window.fadeIn('200');
+    }, 200);
+    setTimeout(function() { 
+        window.fadeOut('200');
+    }, 1500);
+    setTimeout(function() { 
+        fon.fadeOut('200');
+    }, 1700);
+}
 $(document).on('click', '.sen_form', function(e){
     e.preventDefault();
     let form = $('form'),
@@ -24,23 +42,23 @@ $(document).on('click', '.sen_form', function(e){
         req_phone = form.find('.req_phone'),
         req_email = form.find('.req_email'),
         valid = true;
-    if (req_name) {
-        if(req_name.val() < 4) {
+    if (req_name.length > 0) {
+        if(req_name.val().length < 4) {
             req_name.addClass('error');
             valid = false;
         } else {
             req_name.removeClass('error');
         }
     }
-    if (req_phone) {
-        if(!req_phone.val().match(/^[0-9]+$/) != null && req_phone.val().length() > 2) {
+    if (req_phone.length > 0) {
+        if(!isPhone(req_phone.val())) {
             req_phone.addClass('error');
             valid = false;
         } else {
             req_phone.removeClass('error');
         }
     }
-    if (req_email) {
+    if (req_email.length > 0) {
         if(!isEmail(req_email.val())) {
             req_email.addClass('error');
             valid = false;
@@ -51,21 +69,17 @@ $(document).on('click', '.sen_form', function(e){
     if (valid) {
         $.ajax({
             type: "POST",
-            url: './send.php',
+            url: './sender.php',
             data: form.serialize(),
             beforeSend: function () {
-                alert("Hello! I am an alert box!!");
-                // $(formNm).html('<p class="sendprosec">Sending...</p>');
+                success_modal ();
             },
             success: function (data) {
-                alert("Успех");
-                // Вывод текста результата отправки
-                // $(formNm).html('<p style="text-align:center">'+data+'</p>');
+                success_modal ();
             },
             error: function (jqXHR, text, error) {
-                // $(formNm).html(error);
+
             }
         });
     }
-
 });
