@@ -809,25 +809,248 @@ footer .col {
     width: 66vw;
     margin-left: -15px;
 }
+.reviews_over {
+    overflow: hidden;
+}
+.slider_arrow {
+    width: 25px;
+    height: 14px;
+    position: absolute;
+    bottom: -20px;
+    cursor: pointer;
+    transition: transform 0.4s;
+    z-index: 10;
+}
+.slider_arrow:hover {
+    transform: scale(1.1);
+}
+.slider_prew {
+    background: url('../images/left.svg') no-repeat;
+    background-size: 100% 100%;
+    right: 40px;
+}
+.slider_next {
+    background: url('../images/right.svg') no-repeat;
+    background-size: 100% 100%;
+    right: 0;
+}
 @media (max-width: 1480px) {
-    .main {
+    .main,
+    .main.tips,
+    .main.repair {
         width: 1110px;
+    }
+    .contact .main_text {
+        right: 30px;
+        top: 38px;
+    }
+    .main.contact {
+        width: 1110px;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+    .contact .main_title {
+        width: 435px;
+        top: 20px;
+        left: 0px;
+    }
+    .main.tips {
+        width: 854px;
+        padding-top: 15px;
+    }
+    .tips .main_title {
+        width: 370px;
+        top: -10px;
+        left: -60px;
+    }
+    .main.repair {
+        padding-bottom: 40px;
+    }
+    .tips .main_text {
+        right: -130px;
+        top: 60px;
+    }
+    .repair .main_text {
+        right: -10px;
+        top: 50px;
+    }
+    .main_title {
+        width: 385px;
+        top: 10px;
+    }
+    .repair.main .bg_repair {
+        width: 520px;
+        margin: 30px auto;
+        display: block;
+    }
+    .reviews .main_text {
+        right: -90px;
+        top: 50px;
+    }
+    .main.reviews {
+        width: 800px;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+    .reviews .main_title {
+        width: 418px;
+        top: 50px;
+        left: -120px;
+    }
+    .main.about {
+        width: 1110px;
+        padding-left: 0;
+        padding-top: 102px;
+    }
+    .services.main {
+        width: 1110px;
+        padding-left: 0;
+        padding-top: 102px;
+    }
+    .services .main_text {
+        right: 0px;
+        top: 25px;
+    }
+    .services .main_title {
+        width: 450px;
+        top: 25px;
+        left: -5px;
+    }
+    .main_header {
+        margin-bottom: 40px;
     }
     .main_title {
         width: 465px;
-        top: 50px;
+        top: 35px;
         left: 0;
     }
+    .about .main_title {
+        width: 465px;
+        top: 60px;
+    }
+    .about .main_text {
+        right: 5px;
+    }
     .main_text {
-        right: 0;
-        top: 90px;
+        right: 40px;
+        top: 50px;
+    }
+    .about_title h2 {
+        font-size: 70px;
+        line-height: 100px;
     }
 }
 @media (max-width: 1180px) {
     .main,
+    .main.about,
+    .services.main,
+    .main.reviews,
+    .main.contact,
+    .main.tips,
+    .main.repair,
     .container {
         width: 788px;
         padding: 0 10px;
+    }
+    .main.tips,
+    .main.contact {
+        padding-bottom: 40px;
+    }
+    .contact .main_text {
+        right: 0px;
+        top: -5px;
+    }
+    .contitle {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .contact_form-right,
+    .contact_form-left {
+        width: calc(50% - 10px);
+    }
+    .contact .main_title {
+        width: 315px;
+        top: -17px;
+    }
+    .tips .main_text {
+        right: 20px;
+        top: 35px;
+        width: 260px;
+    }
+    .litleform_right .content {
+        padding: 20px;
+        width: auto;
+    }
+    .tips .main_title {
+        width: 315px;
+        top: 10px;
+        left: 25px;
+    }
+    .main.tips>img {
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+    }
+    .litleform_right p {
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 20px;
+    }
+    .repair .advantages_right {
+        width: calc(60% - 10px);
+    }
+    .repair .advantages_left {
+        width: calc(40% - 10px);
+    }
+    .repair .main_text {
+        right: 0px;
+        top: 50px;
+    }
+    .repair .main_title {
+        width: 320px;
+        top: -10px;
+    }
+    .repair.main .bg_repair {
+        width: 340px;
+        padding-right: 45px;
+    }
+    .services.main,
+    .main.reviews {
+        padding-bottom: 40px;
+    }
+    .services .main_text {
+        right: -25px;
+        top: -10px;
+    }
+    .reviews .main_text {
+        right: -20px;
+        top: 75px;
+    }
+    .reviews .main_title {
+        width: 310px;
+        top: 15px;
+        left: 5px;
+    }
+    .services .main_title {
+        width: 325px;
+        top: -10px;
+        left: 5px;
+    }
+    .about .main_title {
+        width: 340px;
+        top: -15px;
+        left: 0;
+    }
+    .ptf {
+        padding-top: 60px;
+    }
+    .about .main_text {
+        right: -20px;
+        top: -5px;
+    }
+    .about_title h2 {
+        font-size: 60px;
+        line-height: 85px;
     }
     .logo {
         width: 170px;
@@ -858,9 +1081,11 @@ footer .col {
     }
     .main_title {
         width: 350px;
+        top: -10px;
     }
     .main_text {
-        top: 60px;
+        top: 10px;
+        right: 0;
         font-size: 14px;
         line-height: 1.2;
         max-width: 300px;
@@ -951,9 +1176,76 @@ footer .col {
 
 @media (max-width: 788px) {
     .main,
+    .main.about,
+    .services.main,
+    .main.contact,
+    .main.tips,
+    .main.reviews,
+    .main.repair,
     .container {
         width: 320px;
         padding: 0 10px;
+    }
+    .slider_arrow {
+        width: 50px;
+        height: 28px;
+        top: 20px;
+        bottom: auto;
+    }
+    .slider_prew {
+        left: 0;
+        right: auto;
+    }
+    .tips .main_title,
+    .about .main_title {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .services .main_text,
+    .about .main_text {
+        right: 0;
+        top: 0;
+    }
+    
+    .services .main_title {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .contact_form-left {
+        order: 2;
+        margin-top: 30px;
+    }
+    .main.contact {
+        padding-bottom: 30px;
+    }
+    .contact_form-area {
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+    .contact_form-right,
+    .contact_form-left {
+        width: 100%;
+    }
+    .tips_area .ht {
+        font-size: 18px;
+        line-height: 1.4;
+        padding-left: 20px;
+    }
+    .main.tips>img {
+        margin-bottom: 30px;
+    }
+    .tips .main_text {
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .services.main {
+        padding-bottom: 30px;
+    }
+    .main.reviews {
+        padding-bottom: 30px;
     }
     .mob_button {
         display: block;
@@ -961,6 +1253,97 @@ footer .col {
         height: 46px;
         position: relative;
         margin-right: -15px;
+    }
+    .repair.main .bg_repair {
+        width: 100%;
+        padding-right: 0;
+    }
+    .litleform {
+        flex-wrap: wrap;
+        max-height: 100%;
+    }
+    .litleform_left {
+        order: 2;
+    }
+    .repair .advantages_left,
+    .litleform_left,
+    .litleform_right,
+    .repair .advantages_right {
+        width: 100%;
+    }
+    
+    .repair .ht {
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .reviews_area {
+        flex-wrap: wrap;
+    }
+    .repair .main_text {
+        top: 0;
+    }
+    .reviews_full,
+    .reviews_content {
+        width: 100%;
+    }
+    .reviews_content {
+        display: flex;
+        flex-direction: column;
+    }
+    .reviews_nav {
+        margin-top: 30px;
+        width: 100%;
+        margin-left: 0;
+        order: 1;
+    }
+    .reviews_content-des p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .reviews_content-name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .reiting {
+        margin: 0 auto 10px;
+        display: block;
+    }
+    .reviews_content-des {
+        margin-top: 0;
+        text-align: center;
+    }
+    .reviews_nav-img {
+        margin: 0 5px;
+    }
+    .reviews_full {
+        margin-bottom: 20px;
+    }
+    .reviews_full-img {
+        width: 100%;
+        height: auto;
+    }
+    .about .ht:before {
+        left: -114px;
+    }
+    .about_title h2 {
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .about_area p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .about_area {
+        flex-wrap: wrap;
+        padding-left: 20px;
+    }
+    .about_col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about_col:last-child {
+        margin-bottom: 0;
     }
     .mob_button span {
         left: 15px;
@@ -1054,7 +1437,8 @@ footer .col {
     .main_header a:last-child {
         margin-bottom: 0;
     }
-    .main_title {
+    .main_title,
+    .reviews .main_title {
         position: relative;
         top: auto;
         left: 0;
@@ -1074,10 +1458,12 @@ footer .col {
         border: 10px solid #131313;
         z-index: 2;
     }
-    .main_text {
+    .main_text,
+    .reviews .main_text {
         margin-top: 0;
         position: relative;
         top: 0;
+        right: 0;
         max-width: 100%;
         padding-bottom: 30px;
     }
