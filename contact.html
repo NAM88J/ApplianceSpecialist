@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
@@ -112,12 +113,12 @@
                 </div>
                 <div class="contact_form-right">
                     <p class="contitle">Feel free to contact us<span>.</span></p>
-                    <form class="form" action="#">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Phone number">
-                        <input type="text" placeholder="Email">
-                        <textarea placeholder="Your message"></textarea>
-                        <button>submit</button>
+                    <form id="form" class="form" action="#">
+                        <input class="req_name" type="text" name="name" placeholder="Name">
+                        <input class="req_phone" type="phone" name="phone" placeholder="Phone number">
+                        <input class="req_email" type="text" name="email" placeholder="Email">
+                        <textarea name="text" placeholder="Your message"></textarea>
+                        <button class="sen_form">submit</button>
                     </form>
                 </div>
             </div>
