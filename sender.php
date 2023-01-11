@@ -3,8 +3,7 @@
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $text = $_POST['text'];
-    $to  = "<anatoliy.n25@gmail.com>, " ; 
-    $to .= "mail2@example.com>"; 
+    $to  = "<anatoliy.n25@gmail.com>" ; 
     $subject = "Message title"; 
     $message = $name . '<br>' . $phone . '<br>' . $email . '<br>'. $text;
     $headers  = "Content-type: text/html; charset=windows-1251 \r\n"; 
