@@ -667,7 +667,7 @@ footer .col {
     margin-bottom: 70px;
 }
 .plans_item {
-    width: calc(33.333% - 10px);
+    width: calc(33.333% - 30px);
     border: 2px solid #F24242;
     padding: 30px 15px 60px;
     text-align: center;
@@ -1147,6 +1147,7 @@ footer .col {
     }
     .plans_item {
         padding: 20px 10px 40px;
+        width: calc(33.333% - 12px);
     }
     .plans {
         margin-bottom: 60px;
