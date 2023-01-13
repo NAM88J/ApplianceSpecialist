@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick.css">
     <title>Document</title>
 </head>
 <body>
@@ -78,6 +79,50 @@
         <img src="./images/bg_main.png" alt="Repair">
     </section>
 
+
+    <section class="plans">
+        <div class="container">
+            <div class="plans_area">
+                <div class="plans_item">
+                    <div>
+                        <h3 class="plans_title">Installation</h3>
+                        <p class="plans_suptitle">price starts at</p>
+                        <p class="plans_prise">$189</p>
+                    </div>
+                    <div class="plans_content">
+                        <p>Your dream home deserves the best.</p>
+                        <p>You buy it and we'll make sure that everything is installed properly and works as intended!</p>
+                    </div>
+                </div>
+
+                <div class="plans_item">
+                    <div>
+                        <h3 class="plans_title">Diagnose & Repair</h3>
+                        <p class="plans_prise">$89+</p>
+                    </div>
+                    <div class="plans_content">
+                        <p>Lets repair the appliance that you love and has served you for years.</p>
+                        <p>*This fee is waived upon agreement to repair quote (given on site by technician)</p>
+                    </div>
+                </div>
+
+                <div class="plans_item">
+                    <div>
+                        <h3 class="plans_title">Maintenance</h3>
+                        <p class="plans_suptitle">price starts at</p>
+                        <p class="plans_prise">$125</p>
+                    </div>
+                    <div class="plans_content">
+                        <p>Basic maintenance of the appliance, replacement of rollers, sliders, cleaning, clogs etc.</p>
+                        <p>*price does not include parts cost</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plans_center">
+                <a href="#mapi" class="plans_link">Book now</a>
+            </div>
+        </div>
+    </section>
     <section class="foryou">
         <div class="container">
             <h1 class="title ico">what we can do for you<span>.</span></h1>
@@ -92,6 +137,23 @@
         </div>
     </section>
 
+    <section class="brend">
+        <div class="brend_slider">
+            <img src="./images/brand/Frame_2.png" alt="alt">
+            <img src="./images/brand/Frame_3.png" alt="alt">
+            <img src="./images/brand/Frame_4.png" alt="alt">
+            <img src="./images/brand/Frame_5.png" alt="alt">
+            <img src="./images/brand/Frame_6.png" alt="alt">
+            <img src="./images/brand/Frame_7.png" alt="alt">
+            <img src="./images/brand/Frame_8.png" alt="alt">
+            <img src="./images/brand/Frame_9.png" alt="alt">
+            <img src="./images/brand/Frame_10.png" alt="alt">
+            <img src="./images/brand/Frame_11.png" alt="alt">
+            <img src="./images/brand/Frame_12.png" alt="alt">
+            <img src="./images/brand/Frame_13.png" alt="alt">
+            <img src="./images/brand/Frame_14.png" alt="alt">
+        </div>
+    </section>
     <section class="advantages">
         <div class="container">
             <h2 class="title">Advantages<span>.</span></h2>
@@ -119,7 +181,25 @@
         </div>
     </section>
 
-    <footer>
+    <section class="mapindex" id="mapi">
+        <div class="container">
+            <div class="mapindex_area">
+                <div class="col">
+                    <img src="./images/map_index.png" alt="Map">
+                </div>
+                <div class="col">
+                    <form id="form" class="form" action="#">
+                        <input autocomplete="off" class="req_name" type="text" name="name" placeholder="Name">
+                        <input autocomplete="off" class="req_phone" type="phone" name="phone" placeholder="Phone number">
+                        <input autocomplete="off" class="req_email" type="text" name="email" placeholder="Email">
+                        <textarea autocomplete="off" name="text" placeholder="Your message"></textarea>
+                        <button class="sen_form">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="ptf">
         <div class="container flex">
             <div class="col footer_p">
                 <a href="/index.html" class="logo_footer">
@@ -239,6 +319,8 @@
         </div>
     </footer>
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/brand_slider.js"></script>
 </body>
 </html>

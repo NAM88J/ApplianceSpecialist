@@ -13,6 +13,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 a[x-apple-data-detectors] {
     color: inherit !important;
@@ -524,7 +525,7 @@ footer .col {
 
 /* Services */
 .services.main {
-    width: 1286px;
+    width: 1494px;
     padding-left: 208px;
     padding-top: 118px;
 }
@@ -635,7 +636,8 @@ footer .col {
 .form input.error {
     border-bottom: 1px solid #F24242     ;
 }
-.form button {
+.form button,
+.plans_link {
     font-size: 20px;
     line-height: 26px;
     width: 100%;
@@ -650,9 +652,73 @@ footer .col {
     -o-transition: color 0.4s, border 0.4s;
     transition: color 0.4s, border 0.4s;
 }
-.form button:hover {
+.form button:hover,
+.plans_link:hover {
     border: 1px solid #F24242;
     color: #F24242;
+}
+/* Plans */
+.plans {
+    margin-bottom: 120px;
+}
+.plans_area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.plans_item {
+    width: calc(33.333% - 10px);
+    border: 2px solid #F24242;
+    padding: 30px 15px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.plans .plans_link {
+    display: inline-block;
+    width: auto;
+}
+.plans_suptitle {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+.plans_prise {
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 70px;
+}
+.plans_content p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.plans_content p:last-child {
+    margin-bottom: 0;
+}
+.plans_title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(242, 66, 66, 0.5);
+}
+.plans_center {
+    text-align: center;
+}
+.mapindex_area .form input,
+.mapindex_area .form textarea {
+    width: 100%;
 }
 /* Tips */
 .main.tips {
@@ -922,6 +988,38 @@ footer .col {
     font-size: 34px;
     line-height: 1.5;
 }
+.mapindex_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mapindex_area img {
+    max-width: 100%;
+}
+.mapindex_area .col {
+    width: calc(50% - 15px);
+}
+.brend_slider {
+    margin-bottom: 120px;
+    text-align: center;
+}
+.brend_slider img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+.works_area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.works_item {
+    width: calc(25% - 20px);
+}
+.works_item img {
+    width: 100%;
+    border: 1px solid #F24242;
+}
 @media (max-width: 1480px) {
     .main,
     .main.tips,
@@ -1039,6 +1137,27 @@ footer .col {
     .container {
         width: 788px;
         padding: 0 10px;
+    }
+    .plans_title {
+        font-size: 22px;
+    }
+    .plans_area {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .plans_item {
+        padding: 20px 10px 40px;
+    }
+    .plans {
+        margin-bottom: 60px;
+    }
+    .plans_content p {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .plans_prise {
+        font-size: 56px;
+        margin-bottom: 50px;
     }
     .modal {
         padding: 15px;
@@ -1267,6 +1386,9 @@ footer .col {
     .footer_p {
         padding-top: 30px;
     }
+    .brend_slider {
+        margin-bottom: 60px;
+    }
 }
 
 @media (max-width: 788px) {
@@ -1277,9 +1399,16 @@ footer .col {
     .main.tips,
     .main.reviews,
     .main.repair,
+    .brend,
     .container {
         width: 320px;
         padding: 0 10px;
+    }
+    .brend {
+        margin: 0 auto;
+    }
+    .brend_slider {
+        margin-bottom: 40px;
     }
     .modal_content {
         font-size: 24px;
@@ -1289,6 +1418,39 @@ footer .col {
         height: 28px;
         top: 20px;
         bottom: auto;
+    }
+    .plans_area {
+        flex-wrap: wrap;
+    }
+    .plans_title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .plans_suptitle {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .plans_area {
+        margin-bottom: 20px;
+    }
+    .mapindex_area {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    .mapindex_area .col {
+        width: 100%;
+    }
+    .mapindex_area .col:first-child {
+        margin-bottom: 30px;
+    }
+    .plans_prise {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .plans_item {
+        width: 100%;
+        padding: 15px 10px 20px;
+        margin-bottom: 25px;
     }
     .slider_prew {
         left: 0;
@@ -1650,5 +1812,8 @@ footer .col {
     footer {
         padding-bottom: 20px;
     }
-    
+    .works_item {
+        width: calc(50% - 10px);
+        margin-top: 20px;
+    }
 }

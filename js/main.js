@@ -35,6 +35,12 @@ function success_modal () {
         fon.fadeOut('200');
     }, 1700);
 }
+$(document).on('click', '.plans_link', function (e) {
+    e.preventDefault();
+    let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1200);
+});
 $(document).on('click', '.sen_form', function(e){
     e.preventDefault();
     let form = $('form'),
